@@ -1,193 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v22.0"></script>
+
+	<div id="menu">
+		<ul>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#photos">My Photos</a></li>
+			<li><a href="#playlist">My Playlist</a></li>
+			<li><a href="#like">Like</a></li>
+			<li><a href="#qrcoder">QR Code</a></li>
+			<li><a href="#spa">Q&A</a></li>
+			<li><a href="#contact">Contact Me</a></li>
+		</ul>
+	</div>
 		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="about" class="section">
+		<h2>About Me</h2>
+		<p>Josef, my grandfather, is an incredible person with a rich history. He was born and raised in Ukraine, where he spent the early years of his life. Thirty years ago, he made the courageous decision to move to Israel, seeking a better future for his family.</p>
+		<p>Josef is known for his kindness, wisdom, and resilience. He has always been a source of inspiration to those around him. In Israel, he built a new life, embracing the culture and contributing to the community. He loves sharing stories about his childhood in Ukraine and the journey that brought him to where he is today.</p>
+		<p>In his free time, Josef enjoys gardening, reading historical books, and spending time with his grandchildren. His life is a testament to the power of determination and the importance of family.</p>
+	</section>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="photos" class="section">
+		<h2>My Photos</h2>
+		<p>Check out some of my favorite photos below.</p>
+		<div class="photo-gallery">
+			<img src="photos/photo1.jpg" alt="Photo 1">
+			<img src="photos/photo2.jpg" alt="Photo 2">
+			<img src="photos/photo3.jpg" alt="Photo 3">
+			<img src="photos/photo4.jpg" alt="Photo 4">
+			<img src="photos/photo5.jpg" alt="Photo 5">
+		</div>
+	</section>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="playlist" class="section">
+		<h2>My Playlist</h2>
+		<p>Here is one of my favorite songs:</p>
+		<div class="youtube-video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/43CmPUfQNHs?si=VtsM7JWxokkKdI5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+	</section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="like" class="section">
+		<h2>Give Me a Like</h2>
+		<!-- Facebook Like Button -->
+		<div class="fb-like" data-href="https://www.facebook.com/" data-width="" data-layout="standard" data-action="" data-size="" data-share="false"></div>
+	</section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="qrcoder" class="section">
+		<h2>Scan My QR Code</h2>
+		<p>Use the QR code below to visit this website:</p>
+			<div class="qrcode-container">
+				<img src="photos/qrcode.png" alt="QR Code" />
+			</div>
+	</section>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="spa" class="section">
+		<h2>Q&A</h2>
+		<div>
+			<button class="toggle-answer" onclick="toggleAnswer('answer1')">1. List three main differences between Web1, Web2, and Web3</button>
+			<div id="answer1" class="answer" style="display: none;">
+				<ul>
+					<li><strong>Web1:</strong> Static web pages with limited interactivity. Users are primarily consumers of content.</li>
+					<li><strong>Web2:</strong> Dynamic and interactive web, enabling user-generated content, social media, and collaboration.</li>
+					<li><strong>Web3:</strong> Decentralized web using blockchain technology, focusing on user ownership, privacy, and smart contracts.</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<button class="toggle-answer" onclick="toggleAnswer('answer2')">2. Explain the differences noted in question 1 by giving an example of a use case</button>
+			<div id="answer2" class="answer" style="display: none;">
+				<p>Consider the search query "side effects of medications":</p>
+				<ul>
+					<li><strong>Web1:</strong> The user would find static pages with basic information, such as a list of side effects, without any personalization or interaction.</li>
+					<li><strong>Web2:</strong> The user could find dynamic content, such as forums or social media discussions, where people share their experiences with medications. The results might also include personalized recommendations based on the user's search history.</li>
+					<li><strong>Web3:</strong> The user could access decentralized health platforms where verified medical professionals and patients contribute data. The information would be transparent, secure, and possibly include smart contracts to ensure the authenticity of the data.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
+	<section id="contact" class="section">
+		<h2>Contact Me</h2>
+		<p>Feel free to reach out to me through this form.</p>
+		<form id="contact-form" action="mailto:sean.shuhman@gmail.com" method="post" enctype="text/plain">
+			<label for="email">Your Email:</label><br>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+			
+			<label for="message">Your Message:</label><br>
+			<textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+			
+			<label for="emoji">Choose an Emoji:</label><br>
+			<select id="emoji" name="emoji">
+				<option value="😊">😊 Happy</option>
+				<option value="😢">😢 Sad</option>
+				<option value="👍">👍 Thumbs Up</option>
+				<option value="❤️">❤️ Love</option>
+			</select><br><br>
+			
+			<button type="submit">Send</button>
+		</form>
+	</section>
 
+	<script type="text/javascript">
+		$(function() {
+			$("#menu a").click(function(e) {
+				e.preventDefault();
+				$('html,body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top - 50
+				}, 500);
+			});
+		});
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+		$(document).scroll(function() {
+			$('#menu').toggle($(this).scrollTop() > 100);
+		});
+
+		function toggleAnswer(answerId) {
+			const answer = document.getElementById(answerId);
+			answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+		}
+	</script>
 </body>
 </html>
